@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "dzkQ5Teno2T6oCB+TDjVLdcpl183NhnNhlETJfifNS4=",
+  "Hash": "1T1Zs7LD7p+g4ITTGTT78xwvj+ImppJc8qHO3g9CF/s=",
   "Source": "HotelsWebApi",
   "BasePath": "_content/HotelsWebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HotelsWebApi\\wwwroot",
+      "Source": "HotelsWebApi",
+      "ContentRoot": "C:\\Users\\globa\\Desktop\\asp.net\\PetProjects\\Hotels\\MinimalApiPetProject\\HotelsWebApi\\wwwroot\\",
+      "BasePath": "_content/HotelsWebApi",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

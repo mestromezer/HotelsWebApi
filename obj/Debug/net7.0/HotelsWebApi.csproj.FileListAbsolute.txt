@@ -62,3 +62,4 @@ C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWeb
 C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\obj\Debug\net7.0\HotelsWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\HotelsWebApi.staticwebassets.runtime.json

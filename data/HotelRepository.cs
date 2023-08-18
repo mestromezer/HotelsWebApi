@@ -8,10 +8,11 @@ public class HotelRepository : IHotelRepository
         _disposed = false;
         _context = context;
     }
-    public async Task<List<Hotel>> GetHotelAsync()=> await _context.Hotels.ToListAsync();
-    public async Task<Hotel> GetHotelAsync(int hotelId) => await _context.Hotels.FindAsync(new object[]{hotelId});
+    public  Task<List<Hotel>> GetHotelAsync()=> _context.Hotels.ToListAsync();
+    public async Task<Hotel> GetHotelAsync(int hotelId) =>  await _context.Hotels.FindAsync(new object[]{hotelId});
+    public  Task<List<Hotel>> GetHotelsAsync(string query)=>  _context.Hotels.Where(h => h.Name.Contains(query)).ToListAsync();
 
-    public async Task InsertHotelAsync(Hotel hotel) => await _context.Hotels.AddAsync(hotel);
+    public async Task InsertHotelAsync(Hotel hotel) =>  await _context.Hotels.AddAsync(hotel);
 
     public async Task UpdateHotelAsync(Hotel hotel)
     {
@@ -41,4 +42,11 @@ public class HotelRepository : IHotelRepository
             _disposed=true;
         }
     }
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    
 }

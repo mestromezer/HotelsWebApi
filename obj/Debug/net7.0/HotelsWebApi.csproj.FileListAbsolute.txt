@@ -57,3 +57,8 @@ C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWeb
 C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\obj\Debug\net7.0\HotelsWebApi.csproj.CopyComplete
+C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\globa\Desktop\asp.net\PetProjects\Hotels\MinimalApiPetProject\HotelsWebApi\obj\Debug\net7.0\HotelsWebApi.MvcApplicationPartsAssemblyInfo.cs

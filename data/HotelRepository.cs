@@ -14,13 +14,12 @@ public class HotelRepository : IHotelRepository
 
     public async Task InsertHotelAsync(Hotel hotel) =>  await _context.Hotels.AddAsync(hotel);
 
-    public async Task UpdateHotelAsync(Hotel hotel)
+    public async Task UpdateHotelAsync(Hotel hotel,int id)
     {
-        var fromDbHotel = await _context.Hotels.FindAsync(new object[]{hotel.Id});
+        var fromDbHotel = await _context.Hotels.FindAsync(new object[]{id});
         if(fromDbHotel == null){return ;}
         fromDbHotel.Name = hotel.Name;
         fromDbHotel.CostPerNight = hotel.CostPerNight;
-        //await _context.SaveChangesAsync();
     }
     public async Task DeleteHotelAsync(int id)
     {

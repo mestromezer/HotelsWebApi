@@ -6,6 +6,7 @@ builder.Services.AddDbContext<HotelDb>(options=>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("Default"));
 });
+builder.Services.AddScoped<IHotelRepository,HotelRepository>();
 
 var app = builder.Build();
 
@@ -17,55 +18,36 @@ if(app.Environment.IsDevelopment())
 }
 
 
-app.MapGet("/hotels", async (HotelDb db) => await db.Hotels.ToListAsync());
-app.MapGet("/hotels/{id}", async (HotelDb db,int id) => 
-await db.Hotels.FirstOrDefaultAsync(h=> h.Id == id) is Hotel hotel?
+app.MapGet("/hotels", async (HotelRepository repository) => Results.Ok(await repository.GetHotelAsync()));
+app.MapGet("/hotels/{id}", async (HotelRepository repository,int id) => 
+await repository.GetHotelAsync(id) is Hotel hotel?
 Results.Ok(hotel):
 Results.NotFound()
 );
 
-app.MapPost("/hotels", async ([FromServices]HotelDb db, [FromBody]Hotel hotel, HttpResponse response) =>
+app.MapPost("/hotels", async (HotelRepository repository, [FromBody]Hotel hotel, HttpResponse response) =>
 { 
-    await db.AddAsync(hotel);
-    await db.SaveChangesAsync();
+    await repository.InsertHotelAsync(hotel);
+    await repository.SaveAsync();
     return Results.Created($"/hotels/{hotel.Id}", hotel);
 });
 
-app.MapPut("/hotels", async (HotelDb db, [FromBody]Hotel hotel) =>
+app.MapPut("/hotels", async (HotelRepository repository, [FromBody]Hotel hotel) =>
 {
-    var hotelFromDb = await db.Hotels.FindAsync(new int[] { hotel.Id });
-    if (hotelFromDb == null) return Results.NotFound();
-
-    hotelFromDb.Name = hotel.Name;
-    hotelFromDb.CostPerNight=hotel.CostPerNight;
-    await db.SaveChangesAsync();
+    await repository.UpdateHotelAsync(hotel);
+    await repository.SaveAsync();
     return Results.NoContent();
 }
 );
-app.MapDelete("/hotels/{id}", async (HotelDb db, int id) => 
+app.MapDelete("/hotels/{id}", async (HotelRepository repository, int id) => 
 {
-    var hotelFromDb = await db.Hotels.FirstOrDefaultAsync(h => h.Id == id);
-    if (hotelFromDb == null) return Results.NotFound();
-    if(hotelFromDb.Id != id) return Results.Conflict(new Exception("Ids are different"));
-    db.Hotels.Remove(hotelFromDb);
-    await db.SaveChangesAsync();
+    await repository.DeleteHotelAsync(id);
+    await repository.SaveAsync();
     return Results.NoContent();
 });
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.Run();
 
-class HotelDb: DbContext
-{
-    public HotelDb(DbContextOptions options):base(options){}
-    public DbSet<Hotel> Hotels{get;set;}
-}
 
-// Model hotel class
-class Hotel
-{
-    public int Id {get;set;}
-    public string Name {get;set;}
-    public decimal CostPerNight {get;set;}
-}

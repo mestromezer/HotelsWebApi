@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mBroRwAOcZs5P2tbjvX9MlxH5MmeSgbJDSK9lVXXDCBk7cynUr7aJoWD28TVQSUD4iJ6mU0XYam7o+uyrzFRFA==",
+  "dgSpecHash": "/Ds1IcmzQM8qEMhgqpQx9jN7DUC8ib2goT9r81KNhmZdMKxA38+JzIzV9nc6z0HZVPxAP4agyuXVtg/UY82Txg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\Desktop\\asp.net\\PetProjects\\Hotels\\MinimalApiPetProject\\HotelsWebApi\\HotelsWebApi.csproj",
+  "projectFilePath": "C:\\Users\\globa\\OneDrive\\Рабочий стол\\C#\\HotelsWebApi\\HotelsWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.10\\microsoft.data.sqlite.core.7.0.10.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",

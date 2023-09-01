@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1T1Zs7LD7p+g4ITTGTT78xwvj+ImppJc8qHO3g9CF/s=",
+  "Hash": "6E6HNX966DU/qi2r15DdBXT/5Bc7B+yBWvHyGfVh9SY=",
   "Source": "HotelsWebApi",
   "BasePath": "_content/HotelsWebApi",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "HotelsWebApi\\wwwroot",
       "Source": "HotelsWebApi",
-      "ContentRoot": "C:\\Users\\globa\\Desktop\\asp.net\\PetProjects\\Hotels\\MinimalApiPetProject\\HotelsWebApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\globa\\OneDrive\\Рабочий стол\\C#\\HotelsWebApi\\wwwroot\\",
       "BasePath": "_content/HotelsWebApi",
       "Pattern": "**"
     }

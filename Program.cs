@@ -17,10 +17,6 @@ app.UseSwaggerUI(options =>
     options.RoutePrefix = string.Empty;
 });
 app.UseSwagger();
-//app.UseSwaggerUI();
-/*using var scope = app.Services.CreateScope();
-var db = scope.ServiceProvider.GetRequiredService<HotelDb>();
-db.Database.EnsureCreated();*/
 app.UseHttpsRedirection();
 EndpointsCreator.Modify(ref app);
 

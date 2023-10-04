@@ -1,19 +1,11 @@
 {
   "Version": 1,
-  "Hash": "6E6HNX966DU/qi2r15DdBXT/5Bc7B+yBWvHyGfVh9SY=",
+  "Hash": "dzkQ5Teno2T6oCB+TDjVLdcpl183NhnNhlETJfifNS4=",
   "Source": "HotelsWebApi",
   "BasePath": "_content/HotelsWebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "HotelsWebApi\\wwwroot",
-      "Source": "HotelsWebApi",
-      "ContentRoot": "C:\\Users\\globa\\OneDrive\\Рабочий стол\\C#\\HotelsWebApi\\wwwroot\\",
-      "BasePath": "_content/HotelsWebApi",
-      "Pattern": "**"
-    }
-  ],
+  "DiscoveryPatterns": [],
   "Assets": []
 }
